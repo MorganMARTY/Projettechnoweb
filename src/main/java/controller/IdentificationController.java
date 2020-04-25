@@ -33,31 +33,27 @@ public class IdentificationController {
 
     @Inject
     Models models;
-    
-    @Inject // Les infos du joueur, Session scoped
-    private RechercheId resultat;
-
 
     @GET
     public void show() {
-        List<Client> toutlesclients = dao.findAll();
-        models.put("client", toutlesclients);
+        models.put("client", dao.findAll());
     }
 
     @POST
     @ValidateOnExecution(type = ExecutableType.ALL)
-    public String login(@FormParam("contact") String contact) {
-        Client p = dao.find(contact);
+    public String login(@FormParam("contact") String contact, @FormParam("code") String code) {
         try {
-            if (p != null) {
-                resultat.login(p.getContact();
-                return "ce contact existe";
+            Client p = dao.find(code);
+            if (p.getContact().equals(contact)) {
+                return "redirect:/produits";
+
             } else {
-                models.put("databaseErrorMessage", "Ce contact n'existe pas");
+                models.put("databaseErrorMessage", "Ce contact ne correspond pas au client");
             }
         } catch (Exception e) {
-            models.put("databaseErrorMessage", "Ce dispositif n'existe pas");
+            models.put("databaseErrorMessage", "Ce code n'existe pas");
         }
+
         return null;
     }
 }
