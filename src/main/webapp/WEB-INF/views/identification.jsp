@@ -12,15 +12,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Identification</title>
+        <link rel="stylesheet" href="../css/identification.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+        
+        <div class="contact-section">
+        
         <h1>S'IDENTIFIER</h1>
-        <form method="POST"> <%-- L'action par défaut est de revenir à l'URL du contrôleur --%>
-            Nom : <input name="contact"></br>
-            Code : <input name="code" type="password"></br>
-            <input type="submit" value="Valider">
+        <div class="border">
+            <form method="POST" class="ident-form"> <%-- L'action par défaut est de revenir à l'URL du contrôleur --%>
+            Nom : <input name="contact" class="ident-form-text" placeholder="Votre Nom"></br>
+            Code : <input name="code" type="password" class="ident-form-text" placeholder="Mot de Passe"></br>
+            <input type="submit" value="Valider" class="ident-form-btn">
         </form>
-      
+      </div>
+      </div>
     <a href="${pageContext.request.contextPath}/">Retour au menu</a>
 </body>
 </html>
