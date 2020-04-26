@@ -49,7 +49,7 @@ public class IdentificationController {
             Client p = dao.find(code);
             if (p.getContact().equals(contact)) {
                 client.setCode(code);
-                return "redirect:/pageClient";
+                return "redirect:pageClient";
 
             } else {
                 models.put("databaseErrorMessage", "Ce contact ne correspond pas au client");

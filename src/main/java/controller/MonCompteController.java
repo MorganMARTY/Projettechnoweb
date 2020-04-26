@@ -6,29 +6,24 @@
 package controller;
 
 import comptoirs.model.dao.ClientFacade;
-import comptoirs.model.dao.CommandeFacade;
 import comptoirs.model.entity.Client;
-import comptoirs.model.entity.Commande;
-import java.util.Collection;
-import java.util.List;
 import javax.inject.Inject;
 import javax.mvc.Controller;
 import javax.mvc.Models;
 import javax.mvc.View;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.QueryParam;
 
 /**
  *
  * @author marie
  */
+
 @Controller
-@Path("historiqueCommandes") // Le chemin d'accès au contrôleur
-@View("historiqueCommandes.jsp") // La vue qui affiche le résultat
+@Path("monCompte") // Le chemin d'accès au contrôleur
+@View("monCompte.jsp") // La vue qui affiche le résultat
 
-public class ClientCommandeController {
-
+public class MonCompteController {
     @Inject // Le DAO (auto-généré) qui gère les entités "Client"
     ClientFacade facadeCl;
 

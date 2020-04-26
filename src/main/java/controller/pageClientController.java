@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package controller;
+
+import comptoirs.model.dao.ClientFacade;
+import comptoirs.model.entity.Client;
+import javax.inject.Inject;
+import javax.mvc.Controller;
+import javax.mvc.Models;
+import javax.mvc.View;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
+/**
+ *
+ * @author marie
+ */
+@Controller
+@Path("pageClient")
+
+public class pageClientController {
+
+    @Inject
+    Models models;
+
+    @Inject
+    ClientFacade facade;
+
+    @Inject
+    SessionClientController client;
+
+    @GET
+    @View("pageClient.jsp")
+    public void bienvenue() {
+        Client u = facade.find(client.getCode());
+        models.put("utilisateur", u);
+    }
+}
