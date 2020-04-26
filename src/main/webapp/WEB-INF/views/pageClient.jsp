@@ -9,9 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Page Client</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <ul>
+            <li><a href="historiqueCommandes">Historique des commandes</a></li>
+        </ul>
+        <a href="${pageContext.request.contextPath}/">Retour au menu</a>
     </body>
 </html>

@@ -33,6 +33,9 @@ public class IdentificationController {
 
     @Inject
     Models models;
+    
+    @Inject
+    SessionClientController client;
 
     @GET
     public void show() {
@@ -45,7 +48,8 @@ public class IdentificationController {
         try {
             Client p = dao.find(code);
             if (p.getContact().equals(contact)) {
-                return "redirect:/produits";
+                client.setCode(code);
+                return "redirect:/pageClient";
 
             } else {
                 models.put("databaseErrorMessage", "Ce contact ne correspond pas au client");
