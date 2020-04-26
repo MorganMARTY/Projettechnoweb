@@ -33,7 +33,7 @@ public class IdentificationController {
 
     @Inject
     Models models;
-    
+
     @Inject
     SessionClientController client;
 
@@ -45,17 +45,21 @@ public class IdentificationController {
     @POST
     @ValidateOnExecution(type = ExecutableType.ALL)
     public String login(@FormParam("contact") String contact, @FormParam("code") String code) {
-        try {
-            Client p = dao.find(code);
-            if (p.getContact().equals(contact)) {
-                client.setCode(code);
-                return "redirect:pageClient";
+        if (contact.equals("admin") && code.equals("mdp")) {
+            return "redirect:pageAdmin";
+        } else {
+            try {
+                Client p = dao.find(code);
+                if (p.getContact().equals(contact)) {
+                    client.setCode(code);
+                    return "redirect:pageClient";
 
-            } else {
-                models.put("databaseErrorMessage", "Ce contact ne correspond pas au client");
+                } else {
+                    models.put("databaseErrorMessage", "Ce contact ne correspond pas au client");
+                }
+            } catch (Exception e) {
+                models.put("databaseErrorMessage", "Ce code n'existe pas");
             }
-        } catch (Exception e) {
-            models.put("databaseErrorMessage", "Ce code n'existe pas");
         }
 
         return null;

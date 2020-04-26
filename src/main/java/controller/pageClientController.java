@@ -6,6 +6,7 @@
 package controller;
 
 import comptoirs.model.dao.ClientFacade;
+import comptoirs.model.dao.ProduitFacade;
 import comptoirs.model.entity.Client;
 import javax.inject.Inject;
 import javax.mvc.Controller;
@@ -32,10 +33,15 @@ public class pageClientController {
     @Inject
     SessionClientController client;
 
+    @Inject
+    ProduitFacade facadeP;
+
     @GET
     @View("pageClient.jsp")
     public void bienvenue() {
         Client u = facade.find(client.getCode());
         models.put("utilisateur", u);
+        models.put("produits", facadeP.findAll());
     }
+
 }
