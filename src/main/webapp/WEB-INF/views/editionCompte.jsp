@@ -17,28 +17,28 @@
     <body>
         <ul>
             <form method="POST">
-                <li>Mon nom: ${utilisateur.contact} Nouveau nom: <input name="nvNom"></li></br>
-                <li>Ma société: ${utilisateur.societe} Nouvelle société: <input name="nvSociete"></li></br>
-                <li>Ma fonction: ${utilisateur.fonction} Nouvelle fonction: <input name="nvFonction"></li></br>
+                <li>Mon nom: ${utilisateur.contact} </br> Nouveau nom: <input name="nvNom"></li></br>
+                <li>Ma société: ${utilisateur.societe} </br> Nouvelle société: <input name="nvSociete"></li></br>
+                <li>Ma fonction: ${utilisateur.fonction} </br> Nouvelle fonction: <input name="nvFonction"></li></br>
                 <li>Mon adresse: 
                     <ul>
-                        ${utilisateur.adresse} Nouvelle adresse: <input name="nvAdresse">
+                        ${utilisateur.adresse} </br> Nouvelle adresse: <input name="nvAdresse">
                     </ul>
                     <ul>
-                        ${utilisateur.ville} Nouvelle ville: <input name="nvVille">
+                        ${utilisateur.ville} </br> Nouvelle ville: <input name="nvVille">
                     </ul>
                     <ul>
-                        ${utilisateur.region} Nouvelle région: <input name="nvRegion">
+                        ${utilisateur.region} </br> Nouvelle région: <input name="nvRegion">
                     </ul>
                     <ul>
-                        ${utilisateur.codePostal} Nouveau code postal: <input name="nvCodeP">
+                        ${utilisateur.codePostal} </br> Nouveau code postal: <input name="nvCodeP">
                     </ul>
                     <ul>
-                        ${utilisateur.pays} Nouveau pays: <input name="nvPays">
+                        ${utilisateur.pays} </br> Nouveau pays: <input name="nvPays">
                     </ul>
                 </li></br>
-                <li>Mon téléphone: ${utilisateur.telephone} Nouveau numéro: <input name="nvTel"></li></br>
-                <li>Mon fax: ${utilisateur.fax} Nouveau fax: <input name="nvFax"></li></br>
+                <li>Mon téléphone: ${utilisateur.telephone} </br> Nouveau numéro: <input name="nvTel"></li></br>
+                <li>Mon fax: ${utilisateur.fax} </br> Nouveau fax: <input name="nvFax"></li></br>
                 <input type="submit" value="Valider">
             </form>
         </ul>
