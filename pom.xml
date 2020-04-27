@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>io.github.bastide</groupId>
-	<artifactId>Comptoirs_MVC</artifactId>
+	<artifactId>Comptoirs_Chanal_Charbonnier_Marty</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>Comptoirs_MVC</name>
+	<name>Comptoirs_Chanal_Charbonnier_Marty</name>
 
 	<properties>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -112,7 +112,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>Comptoirs_MVC</finalName>
+		<finalName>Comptoirs</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
