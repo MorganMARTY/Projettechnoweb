@@ -15,7 +15,7 @@
             <li><a href="monCompte">Mon compte</a></li>
         </ul>
         <h2>Liste des produits</h2>
-        <form type="POST">
+        <form type="GET">
             <table border='1'>
                 <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th> </th></tr>
                         <%-- Pour chaque produit, une ligne dans la table HTML --%>
@@ -27,8 +27,10 @@
                         <%-- Exemple d'utilisation des fonctions de formatage de données de la JSTL --%>
                         <td><fmt:formatNumber value="${produit.prixUnitaire}" type="currency"/></td>
                         <td>${mvc.encoders.html(produit.categorie.libelle)}</td>
-                        <td><input type="checkbox" name="${mvc.encoders.html(produit.reference)}"></td>
-                    </tr>
+                        <td><input type="checkbox" name="${produit.reference}"
+                                   <c:if test="${checked.equals(checked)}"> ${produitsCaddie}.add(produit) </c:if>
+                                       > </td>
+                        </tr>
                 </c:forEach>
             </table>
 

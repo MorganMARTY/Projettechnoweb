@@ -16,6 +16,7 @@ import javax.mvc.Models;
 import javax.mvc.View;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 
 /**
  *
@@ -38,6 +39,8 @@ public class pageClientController {
 	@Inject
 	ProduitFacade facadeP;
 
+        Collection<Produit> produitsCaddie;
+        
 	@GET
 	@View("pageClient.jsp")
 	public void bienvenue() {
@@ -45,6 +48,10 @@ public class pageClientController {
 		models.put("utilisateur", u);
 		Collection<Produit> prods = facadeP.findAll();
 		models.put("produits", facadeP.findAll());
-	}
+        }
+        
 
-}
+	}
+        
+
+
