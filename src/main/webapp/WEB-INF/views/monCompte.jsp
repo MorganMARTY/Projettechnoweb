@@ -13,6 +13,7 @@
     </head>
     <body>
         <body>
+            <h1>${utilisateur.contact}</h1>
         <ul>
             <li>Ma société: ${utilisateur.societe}</li></br>
             <li>Ma fonction: ${utilisateur.fonction}</li></br>
@@ -24,10 +25,10 @@
                     ${utilisateur.ville}
                 </ul>
                 <ul>
-                    ${utilisateur.région}
+                    ${utilisateur.region}
                 </ul>
                 <ul>
-                    ${utilisateur.codepostal}
+                    ${utilisateur.codePostal}
                 </ul>
                 <ul>
                     ${utilisateur.pays}

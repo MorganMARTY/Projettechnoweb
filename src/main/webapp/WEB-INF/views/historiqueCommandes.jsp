@@ -6,6 +6,10 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,7 +19,7 @@
         <h1>Commandes du client '${utilisateur.societe}'</h1>
         <table border='1'>
             <tr><th>Numéro</th><th>Saisie le</th><th>nb. lignes</th></tr>
-            <c:if test="${empty utilisateur.produitCollection}">
+            <c:if test="${empty utilisateur.commandeCollection}">
                 <tr><td colspan="3">aucun produit dans cette catégorie</td></tr>	
             </c:if>
             <%-- Pour chaque commande, une ligne dans la table HTML --%>

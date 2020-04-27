@@ -81,7 +81,7 @@ public class Client implements Serializable {
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "client")
 	private Collection<Commande> commandeCollection;
-
+        
 	public Client() {
 	}
 
@@ -190,7 +190,6 @@ public class Client implements Serializable {
 	public void setCommandeCollection(Collection<Commande> commandeCollection) {
 		this.commandeCollection = commandeCollection;
 	}
-
 	@Override
 	public int hashCode() {
 		int hash = 0;
