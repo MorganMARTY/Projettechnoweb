@@ -12,8 +12,8 @@
         <title>Mon Compte</title>
     </head>
     <body>
-        <body>
-            <h1>${utilisateur.contact}</h1>
+    <body>
+        <h1>${utilisateur.contact}</h1>
         <ul>
             <li>Ma société: ${utilisateur.societe}</li></br>
             <li>Ma fonction: ${utilisateur.fonction}</li></br>
@@ -37,7 +37,8 @@
             <li>Mon téléphone: ${utilisateur.telephone}</li></br>
             <li>Mon fax: ${utilisateur.fax}</li></br>
         </ul>
-    <a href="${pageContext.request.contextPath}/">Retour au menu</a>
-        
+        <a href="editionCompte">Modifier mes informations</a>
+        <a href="${pageContext.request.contextPath}/">Retour au menu</a>
+
     </body>
 </html>

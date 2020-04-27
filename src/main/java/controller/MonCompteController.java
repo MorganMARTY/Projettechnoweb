@@ -36,7 +36,7 @@ public class MonCompteController {
 
 
     @GET
-    public void afficheCommandesPourLeClient() {
+    public void afficheLeClient() {
         // On utilise le DAO pour trouver le client 
         // qui correspond au paramètre
         Client c = facadeCl.find(client.getCode());
