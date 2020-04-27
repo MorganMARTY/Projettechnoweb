@@ -1,19 +1,19 @@
 <%-- 
-    Document   : pageAdmin
-    Created on : 26 avr. 2020, 15:12:01
+    Document   : caddie
+    Created on : 27 avr. 2020, 18:04:06
     Author     : marie
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Administrateur</title>
+        <title>Caddie</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Votre caddie:</h1>
     </body>
 </html>
