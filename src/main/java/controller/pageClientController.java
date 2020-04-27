@@ -8,6 +8,8 @@ package controller;
 import comptoirs.model.dao.ClientFacade;
 import comptoirs.model.dao.ProduitFacade;
 import comptoirs.model.entity.Client;
+import comptoirs.model.entity.Produit;
+import java.util.Collection;
 import javax.inject.Inject;
 import javax.mvc.Controller;
 import javax.mvc.Models;
@@ -24,24 +26,25 @@ import javax.ws.rs.Path;
 
 public class pageClientController {
 
-    @Inject
-    Models models;
+	@Inject
+	Models models;
 
-    @Inject
-    ClientFacade facade;
+	@Inject
+	ClientFacade facade;
 
-    @Inject
-    SessionClientController client;
+	@Inject
+	SessionClientController client;
 
-    @Inject
-    ProduitFacade facadeP;
+	@Inject
+	ProduitFacade facadeP;
 
-    @GET
-    @View("pageClient.jsp")
-    public void bienvenue() {
-        Client u = facade.find(client.getCode());
-        models.put("utilisateur", u);
-        models.put("produits", facadeP.findAll());
-    }
+	@GET
+	@View("pageClient.jsp")
+	public void bienvenue() {
+		Client u = facade.find(client.getCode());
+		models.put("utilisateur", u);
+		Collection<Produit> prods = facadeP.findAll();
+		models.put("produits", facadeP.findAll());
+	}
 
 }

@@ -1,11 +1,8 @@
-<%-- 
-    Document   : pageClient
-    Created on : 26 avr. 2020, 05:31:18
-    Author     : marie
---%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!-- Import des "tag libraries" de JSP -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
