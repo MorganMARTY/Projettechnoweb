@@ -17,17 +17,27 @@
     </head>
     <body>
         
-        <div class="contact-section">
+   
+
+<div id="entete" >
+    <a href="${pageContext.request.contextPath}/">Retour au menu</a>
+</div>>
+<br><br>
+<div class="contact-section" >
         
-        <h1>S'IDENTIFIER</h1>
-        <div class="border">
-            <form method="POST" class="ident-form"> <%-- L'action par défaut est de revenir à l'URL du contrôleur --%>
+        
+            <br><br>
+         <fieldset>
+            <h1>Log In</h1>
+            <form method="POST" class="ident-form">
+
             Nom : <input name="contact" class="ident-form-text" placeholder="Votre Nom"></br>
             Code : <input name="code" type="password" class="ident-form-text" placeholder="Mot de Passe"></br>
             <input type="submit" value="Valider" class="ident-form-btn">
-        </form>
-      </div>
-      </div>
-    <a href="${pageContext.request.contextPath}/">Retour au menu</a>
+        </fieldset>
+    </form>
+          </div>
+    
 </body>
 </html>
+

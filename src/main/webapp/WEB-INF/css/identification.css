@@ -1,35 +1,36 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 26 avr. 2020, 16:38:46
-    Author     : gaetan
-*/
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "montserrat",sans-serif;
+#entete{
+    float: right;
 }
 
-.contact-section{
-    background: url(../Image/FD1.jpg) no-repeat center;
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(walpFood.jpg) no-repeat center fixed;
     background-size: cover;
-    padding: 60px 0;
+    
+}
+
+fieldset{
+
+    background-color:#DCE1F6;
+    max-width:300px;
+    padding:18px;   
+    border:1px solid rgb(66, 92, 161);  
+    border-radius:8px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .contact-section h1{
     text-align: center;
-    color: #ddd;
-}
-
-.border{
-    width: 100px;
-    height: 10px;
-    background: #34495e;
-    margin: 30px auto;
+    color: #8E9EC6;
+    font-size: 50px;
 }
 
 .ident-form{
@@ -44,13 +45,14 @@ and open the template in the editor.
     display: block;
     width: 100%;
     box-sizing: border-box;
-    margin: 16px 0;
+    margin: 10px 0;
     border: 0;
-    background: #111;
-    padding: 20px 40px;
+    background: #fff;
+    padding: 20px 10px;
     outline: none;
-    color: #ddd;
+    color: #111;
     transition: 0.5s;
+    border-radius:8px;
 }
 
 .ident-form-text:focus{
