@@ -49,7 +49,7 @@ public class pageClientController {
     SessionCaddieController lignesCaddie;
     
     @Inject
-    LigneFacade dao;
+    LigneFacade facadeL;
 
     @GET
     @View("pageClient.jsp")
@@ -67,8 +67,9 @@ public class pageClientController {
         if(facadeP.find(nomP)!=null){
             l.setProduit1(facadeP.find(nomP));
             l.setQuantite(qteP);
-            dao.create(l);
-            lignesCaddie.ajouterlignesCaddie(l);
+            facadeL.create(l);
+            lignesCaddie.ajouterLigneCaddie(l);
+            models.put("lC", lignesCaddie);
             
         }
         else{

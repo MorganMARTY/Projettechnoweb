@@ -16,11 +16,11 @@
     <body>
         <h1>Votre caddie:</h1>
         <table border='1'>
-            <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th> </th></tr>
+            <tr><th>Référence</th></tr>
                     <%-- Pour chaque produit, une ligne dans la table HTML --%>
                     <c:forEach var="ligne" items="${lignesCaddie}">
                 <tr>
-                    <td>${ligne.produit.reference}</td>
+                    <td>${ligne.produit1.reference}</td>
 
                 </tr>
             </c:forEach>

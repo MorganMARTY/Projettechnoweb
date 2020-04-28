@@ -32,7 +32,7 @@ public class SessionCaddieController implements Serializable {
         this.lignesCaddie = lignesCaddie;
     }
 
-    public void ajouterlignesCaddie(Ligne l) {
+    public void ajouterLigneCaddie(Ligne l) {
         lignesCaddie.add(l);
     }
 
