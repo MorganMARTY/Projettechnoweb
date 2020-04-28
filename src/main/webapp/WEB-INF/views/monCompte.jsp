@@ -38,10 +38,10 @@
                     <li>Ville: ${utilisateur.ville}</li>
                 </ul>
                 <ul class="deux">
-                    <li>Région: ${utilisateur.région}</li>
+                    <li>Région: ${utilisateur.region}</li>
                 </ul>
                 <ul class="deux">
-                   <li>Code Postal: ${utilisateur.codepostal}</li>
+                   <li>Code Postal: ${utilisateur.codePostal}</li>
                 </ul>
                 <ul class="deux">
                    <li>Pays: ${utilisateur.pays}</li>

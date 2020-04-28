@@ -17,7 +17,7 @@
         </ul>
         <h2>Liste des produits</h2>
         <table border='1'>
-            <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th> </th></tr>
+            <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th>Unités en stock</th></tr>
                     <%-- Pour chaque produit, une ligne dans la table HTML --%>
                     <c:forEach var="produit" items="${produits}">
                 <tr>
@@ -27,7 +27,7 @@
                     <%-- Exemple d'utilisation des fonctions de formatage de données de la JSTL --%>
                     <td><fmt:formatNumber value="${produit.prixUnitaire}" type="currency"/></td>
                     <td>${mvc.encoders.html(produit.categorie.libelle)}</td>
-                    <td><input type="checkbox" name="${produit.reference}" ></td>
+                    <td><${produit.unitesEnStock} ></td>
                 </tr>
             </c:forEach>
         </table>
