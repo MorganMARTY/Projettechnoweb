@@ -15,5 +15,15 @@
     </head>
     <body>
         <h1>Votre caddie:</h1>
+        <table border='1'>
+            <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th> </th></tr>
+                    <%-- Pour chaque produit, une ligne dans la table HTML --%>
+                    <c:if test="${produitsCaddie}"><c:forEach var="produit" items="${produitsCaddie}">
+                <tr>
+                    <td>${produit.reference}</td>
+                    
+                </tr>
+            </c:forEach></c:if>
+        </table>
     </body>
 </html>
