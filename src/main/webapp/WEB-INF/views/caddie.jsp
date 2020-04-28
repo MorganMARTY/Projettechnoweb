@@ -18,12 +18,12 @@
         <table border='1'>
             <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th> </th></tr>
                     <%-- Pour chaque produit, une ligne dans la table HTML --%>
-                    <c:if test="${produitsCaddie}"><c:forEach var="produit" items="${produitsCaddie}">
+                    <c:forEach var="ligne" items="${lignesCaddie}">
                 <tr>
-                    <td>${produit.reference}</td>
-                    
+                    <td>${ligne.produit.reference}</td>
+
                 </tr>
-            </c:forEach></c:if>
+            </c:forEach>
         </table>
     </body>
 </html>
