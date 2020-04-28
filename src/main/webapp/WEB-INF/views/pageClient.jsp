@@ -16,7 +16,6 @@
             <li><a href="caddie">Mon panier</a></li>
         </ul>
         <h2>Liste des produits</h2>
-
         <table border='1'>
             <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th> </th></tr>
                     <%-- Pour chaque produit, une ligne dans la table HTML --%>
@@ -32,24 +31,7 @@
                 </tr>
             </c:forEach>
         </table>
-        <h3>Ajouter un produit au panier:</h3>
-        <form type="POST">
-            Nom: <input name="nomP">
-            Quantité: <input name="qteP">
-            <input type="submit" value="Ajouter au panier">
-        </form>
-        <table border='1'>
-            <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th> </th></tr>
-                    <%-- Pour chaque produit, une ligne dans la table HTML --%>
-                    <c:forEach var="ligne" items="${lignesCaddie}">
-                <tr>
-                    <td>${ligne.produit1.reference}</td>
-                    <td>${ligne.produit1.nom}</td>
-                    <td>${ligne.produit1.prixUnitaire}</td>
-                    <td>${ligne.produit1.categorie}</td>
-                </tr>
-            </c:forEach>
-        </table>
+        
         <a href="${pageContext.request.contextPath}/">Retour au menu</a>
     </body>
 </html>

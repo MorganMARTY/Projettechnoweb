@@ -60,21 +60,6 @@ public class pageClientController {
         models.put("produits", facadeP.findAll());
     }
 
-    @POST
-    @ValidateOnExecution(type = ExecutableType.ALL)
-    public void nvLigne(@FormParam("nomP") String nomP, @FormParam("qteP") Short qteP) {
-        Ligne l = new Ligne();
-        if(facadeP.find(nomP)!=null){
-            l.setProduit1(facadeP.find(nomP));
-            l.setQuantite(qteP);
-            facadeL.create(l);
-            lignesCaddie.ajouterLigneCaddie(l);
-            models.put("lC", lignesCaddie);
-            
-        }
-        else{
-            models.put("databaseErrorMessage", "Ce code n'existe pas");
-        }
-    }
+    
     }
     
