@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28 avr. 2020, 21:57:11
+    Author     : gaetan
+*/
+#entete{
+    float: left;
+    margin: 0;
+    padding: 0;   
+}
+
+.modif{
+     float: left;
+     margin-left: 10px;
+    border: 0;
+    background: #D4B27D;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.modif:hover{
+    background: #2980b9;
+}
+
+
+body{
+	margin: 0;
+    padding: 0;
+	background : url(Profilwalpaper.jpg)  no-repeat center fixed;
+	background-size: cover;
+	color: #4c4a37; 
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px; 
+	line-height: 20px; 
+}
+
+img{
+    width:50px;
+    height:45px;
+    margin-right:6px;
+}
+
+h1{
+	color: #7c795d;
+	font-family: 'Trocchi', serif; 
+	font-size: 45px; 
+	font-weight: normal; 
+	line-height: 48px; margin: 0;
+	text-decoration: underline overline #D8B377;
+	margin-left: 20px;
+}
+
+.un{
+list-style: none;
+margin-left: 75px;
+}
+
+
+.deux{
+	list-style: inside;
+}

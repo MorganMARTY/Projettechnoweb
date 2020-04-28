@@ -13,35 +13,43 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Mon Compte</title>
+        <link rel="stylesheet" href="css/compte.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-    <body>
-        <h1>${utilisateur.contact}</h1>
-        <ul>
+        <body>
+
+<div id="entete" >
+    <a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+</div>
+
+<br><br><br><br>
+
+    <h1> Mon compte </h1>
+<br><br>
+        <ul class="un">
             <li>Ma société: ${utilisateur.societe}</li></br>
             <li>Ma fonction: ${utilisateur.fonction}</li></br>
             <li>Mon adresse: 
-                <ul>
-                    ${utilisateur.adresse}
+                <ul class="deux">
+                    <li>Adresse: ${utilisateur.adresse}</li>
+                </ul >
+                <ul class="deux">
+                    <li>Ville: ${utilisateur.ville}</li>
                 </ul>
-                <ul>
-                    ${utilisateur.ville}
+                <ul class="deux">
+                    <li>Région: ${utilisateur.région}</li>
                 </ul>
-                <ul>
-                    ${utilisateur.region}
+                <ul class="deux">
+                   <li>Code Postal: ${utilisateur.codepostal}</li>
                 </ul>
-                <ul>
-                    ${utilisateur.codePostal}
-                </ul>
-                <ul>
-                    ${utilisateur.pays}
+                <ul class="deux">
+                   <li>Pays: ${utilisateur.pays}</li>
                 </ul>
             </li></br>
             <li>Mon téléphone: ${utilisateur.telephone}</li></br>
             <li>Mon fax: ${utilisateur.fax}</li></br>
         </ul>
-        <a href="editionCompte">Modifier mes informations</a>
-        <a href="${pageContext.request.contextPath}/">Retour au menu</a>
-
+        <a href="editionCompte" class="modif">Modifier mes informations</a>
     </body>
 </html>
