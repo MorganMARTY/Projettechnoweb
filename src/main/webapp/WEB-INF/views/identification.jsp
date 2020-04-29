@@ -8,11 +8,12 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Identification</title>
-        <link rel="stylesheet" href="../css/identification.css">
+        <link rel="stylesheet" type="text/css" href="css/identification.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
