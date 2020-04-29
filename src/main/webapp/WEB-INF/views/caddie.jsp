@@ -12,16 +12,27 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Caddie</title>
+         <link rel="stylesheet" href="../css/Caddie.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <h1>Ajouter un produit au panier:</h1>
+
+       <div id="entete" >
+<a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="../Image/houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+</div>
+<br>
+<br>
+        <h2>Ajouter un produit au panier:</h2>
+
         <form type="POST">
-            Nom: <input name="nomP">
-            Quantité: <input name="qteP">
-            <input type="submit" value="Ajouter au panier">
+           <label>Nom:</label> <input name="nomP" placeholder="Nom Produit"><br><br>
+           <label>Quantité:</label> <input name="qteP" placeholder="Quantité"><br><br><br>
+            <input class="Caddie-btn" type="submit" value="Ajouter au panier">
         </form>
-        <h1>Votre panier:</h1>
-        <table border='1'>
+
+      <br><br><br><br><h1>Votre Panier</h1><br><br>
+
+        <table border='1' id="customers">
             <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th> </th></tr>
                     <%-- Pour chaque produit, une ligne dans la table HTML --%>
                     <c:forEach var="ligne" items="${lignesCaddie}">
@@ -33,5 +44,6 @@
                 </tr>
             </c:forEach>
         </table>
+
     </body>
 </html>

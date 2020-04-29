@@ -1,0 +1,105 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 avr. 2020, 16:14:01
+    Author     : gaetan
+*/
+
+body{
+	margin: 0;
+    padding: 0;
+	background : url(../Image/Pageclient.jpg)  no-repeat center fixed;
+	background-size: cover;
+}
+
+img{
+    width:50px;
+    height:45px;
+    margin-right:6px;
+}
+
+#entete{
+    float: left;
+    margin: 0;
+    padding: 0;   
+}
+
+label{
+display:block;
+float:left;
+width:75px;
+margin-left: 150px;
+
+}
+
+input{float: left;}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 75%;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+	background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:  #D8B377;
+  color: white;
+}
+
+h1{
+	color: #111;
+	font-family: 'Trocchi', serif; 
+	font-size: 45px; 
+	font-weight: normal; 
+	line-height: 48px; margin: 0;
+	text-decoration: underline overline #D8B377;
+	text-align: center;
+}
+
+h2{
+	color: #111; 
+	font-family: 'Trocchi', serif; 
+	font-size: 25px; 
+	font-weight: normal; 
+	line-height: 38px; 
+	margin-left: 130px;
+	text-decoration: underline;
+}
+
+
+.Caddie-btn{
+    float: left;
+    margin-left: 190px;
+    border: 0;
+    background: #D8B377;
+    color: #fff;
+    padding: 10px 35px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Caddie-btn:hover{
+    background: #B48438;
+}
