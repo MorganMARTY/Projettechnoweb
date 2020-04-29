@@ -13,14 +13,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Mon Compte</title>
-        <link rel="stylesheet" href="./css/compte.css">
+        <link rel="stylesheet" href="../css/compte.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <body>
 
 <div id="entete" >
-    <a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+    <a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="../Image/houseIcon.png" alt="Bouton retour à l'accueil" /></a>
 </div>
 
 <br><br><br><br>

@@ -7,13 +7,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Page Client</title>
-        <link rel="stylesheet" href="./css/pageclient.css">
+        <link rel="stylesheet" href="../css/pageclient.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
       
         <div id="entete" >
-<a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+<a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="../Image/houseIcon.png" alt="Bouton retour à l'accueil" /></a>
 </div>
 
         <h1>Bienvenue ${utilisateur.contact}</h1>

@@ -33,7 +33,7 @@ and open the template in the editor.
 body{
 	margin: 0;
     padding: 0;
-	background : url(Profilwalpaper.jpg)  no-repeat center fixed;
+	background : url(../Image/Profilwalpaper.jpg)  no-repeat center fixed;
 	background-size: cover;
 	color: #4c4a37; 
 	font-family: 'Source Sans Pro', sans-serif;
