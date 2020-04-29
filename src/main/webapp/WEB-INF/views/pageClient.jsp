@@ -7,16 +7,27 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Page Client</title>
+        <link rel="stylesheet" href="./css/pageclient.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+      
+        <div id="entete" >
+<a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+</div>
+
         <h1>Bienvenue ${utilisateur.contact}</h1>
-        <ul>
-            <li><a href="historiqueCommandes">Historique des commandes</a></li>
-            <li><a href="monCompte">Mon compte</a></li>
-            <li><a href="caddie">Mon panier</a></li>
-        </ul>
+
+
+      
+       <br><br><br><br>
+
         <h2>Liste des produits</h2>
-        <table border='1'>
+
+        <br><br>
+        
+        
+        <table border='1' id="customers">
             <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th>Unités en stock</th></tr>
                     <%-- Pour chaque produit, une ligne dans la table HTML --%>
                     <c:forEach var="produit" items="${produits}">
@@ -31,7 +42,14 @@
                 </tr>
             </c:forEach>
         </table>
+                    
+      <footer id="footer">
+        <ul id="nav">
+            <li><a href="historiqueCommandes">Historique des commandes</a></li>
+            <li><a href="monCompte">Mon compte</a></li>
+            <li><a href="caddie">Mon panier</a></li>     
+        </ul>
+</footer >              
         
-        <a href="${pageContext.request.contextPath}/">Retour au menu</a>
     </body>
 </html>

@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 avr. 2020, 15:05:14
+    Author     : gaetan
+*/
+
+body{
+	margin: 0;
+    padding: 0;
+	background : url(Pageclient.jpg)  no-repeat center fixed;
+	background-size: cover;
+}
+
+h1{
+	color: #111; 
+	font-family: 'Trocchi', serif; 
+	font-size: 25px; 
+	font-weight: normal; 
+	line-height: 48px; 
+	margin: 0;	
+}
+
+h2{
+	color: #111;
+	font-family: 'Trocchi', serif; 
+	font-size: 45px; 
+	font-weight: normal; 
+	line-height: 48px; margin: 0;
+	text-decoration: underline overline #D8B377;
+	text-align: center;
+}
+
+.uno{
+	list-style: none;
+	float: right;
+}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 75%;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+	background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:  #D8B377;
+  color: white;
+}
+
+img{
+    width:50px;
+    height:45px;
+    margin-right:6px;
+}
+
+#entete{
+    float: left;
+    margin: 0;
+    padding: 0;   
+}
+
+
+
+#nav{
+	padding: 0; 
+}
+
+#nav li{
+	display: inline;
+	list-style: none;
+}
+
+#nav a{
+	display:inline-block;
+	margin: 0 30px;
+}
+
+#footer {
+   text-align:center;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    display:inline-block;
+    vertical-align:top;
+    font-size:20px
+}
+
+a{
+		font-style: italic;
+		color: #111
+
+}
