@@ -4,33 +4,45 @@
 
 	<head>
 		<title>Edition des catégories</title>
+		<link rel="stylesheet" href="Editioncat.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 
 	<body>
+
+  <div id="entete" >
+<a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+</div>
+<br>
+<br>
+
 		<h1>Edition des catégories</h1>
 		
 		<form method="POST"> <%-- L'action par défaut est de revenir à l'URL du contrôleur --%>
-			<input name="libelle" placeholder="Libellé de la catégorie"><br>
+			
+			<label>Libellé de la catégorie : </label> <input name="libelle" placeholder="Libellé de la catégorie"><br>
 			<ul> <%-- On montre les erreurs de saisie éventuelles --%>
 				<c:forEach var="error" items="${validationErrors.getErrors('libelle')}">
 					<li><span style="color: red;">${mvc.encoders.html(error.message)}</span></li>
 				</c:forEach>
 			</ul>
 			
-			<input name="description" placeholder="Description de la catégorie"><br>
+			<label>Description de la catégorie : </label> <input name="description" placeholder="Description de la catégorie"><br>
 			<ul> <%-- On montre les erreurs de saisie éventuelles --%>
 				<c:forEach var="error" items="${validationErrors.getErrors('description')}">
 					<li><span style="color: red;">${mvc.encoders.html(error.message)}</span></li>
 				</c:forEach>
 			</ul>
-			<input type="submit" value="ajouter une nouvelle catégorie">
+			<input type="submit" value="ajouter une nouvelle catégorie" class="newCat-btn">
+
+
 		</form>
 		<%-- Est-ce qu'on a un message d'erreur à afficher ? --%>
 		<c:if test="${not empty databaseErrorMessage}">
 			<h2>Erreur !</h2>
 			<span style="color: red;">${databaseErrorMessage}</span>
 		</c:if>
-		<table border='1'>
+		<table border='1' id="customers">
 			<tr><th>Code</th><th>Libellé</th><th>Description</th></tr>
 			<%-- Pour chaque categorie, une ligne dans la table HTML --%>
 			<c:forEach var="categorie" items="${categories}">
@@ -42,6 +54,6 @@
 			</c:forEach>
 		</table>
 		<hr>
-		<a href="${pageContext.request.contextPath}/">Retour au menu</a>
+		
 	</body>
 </html>

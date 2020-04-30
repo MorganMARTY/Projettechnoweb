@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30 avr. 2020, 23:20:52
+    Author     : gaetan
+*/
+
+body{
+	margin: 0;
+    padding: 0;
+	background : url(Produit.png)  no-repeat center fixed;
+	background-size: cover;
+}
+
+img{
+    width:50px;
+    height:45px;
+    margin-right:6px;
+}
+
+#entete{
+    float: left;
+    margin: 0;
+    padding: 0;   
+}
+
+h3{
+	color: #111; 
+	font-family: 'Trocchi', serif; 
+	font-size: 25px; 
+	font-weight: normal; 
+	line-height: 38px; 
+	margin-left: 130px;
+	text-decoration: underline;
+}
+
+label{
+display:block;
+float:left;
+width: 140px;
+margin-left: 90px;
+font-style: italic;
+font-size: 18px;
+}
+
+input{
+	float: left;	
+}
+
+
+.Prod-btn{
+    float: left;
+    margin-left: 190px;
+    border: 0;
+    background: #808080;
+    color: #fff;
+    padding: 10px 35px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Prod-btn:hover{
+    background: #696969;
+}
+
+

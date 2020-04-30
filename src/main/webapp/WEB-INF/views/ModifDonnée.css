@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30 avr. 2020, 23:44:25
+    Author     : gaetan
+*/
+
+li{
+	list-style-type: none;
+}
+
+body{
+	margin: 0;
+    padding: 0;
+	background : url(ModifProd.jpg)  no-repeat center fixed;
+	background-size: cover;
+}
+
+img{
+    width:50px;
+    height:45px;
+    margin-right:6px;
+}
+
+form{
+	margin-left: 100px;
+}
+
+.Vald-btn{
+	  float: left;
+    margin-left: 120px;
+    border: 0;
+    background: #4B0082;
+    color: #fff;
+    padding: 10px 35px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Vald-btn:hover{
+    background: #9400D3;
+}
+
+label{
+	font-style: italic;
+}
+
+h3{
+	color: #111; 
+	font-family: 'Trocchi', serif; 
+	font-size: 25px; 
+	font-weight: normal; 
+	line-height: 38px; 
+	margin-left: 130px;
+	text-decoration: underline;
+}
