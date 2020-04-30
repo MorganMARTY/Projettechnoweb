@@ -43,33 +43,36 @@ public class CaddieController {
     LigneFacade facadeL;
 
     @Inject
-    SessionCaddieController lignesCaddie;
+    SessionCaddieController caddie;
 
     @GET
     public void show() {
         models.put("produits", facadeP.findAll());
+        models.put("ok", "ok");
     }
-    
+
     @POST
     @ValidateOnExecution(type = ExecutableType.ALL)
     public void nvLigne(@FormParam("nomP") String nomP, @FormParam("qteP") Short qteP) {
         Ligne l = new Ligne();
-        if (facadeP.find(nomP) != null) {
-            l.setProduit1(facadeP.find(nomP));
-            l.setQuantite(qteP);
-            try {
-                facadeL.create(l);
-            } catch (EJBException e) {
-                Logger.getLogger("Comptoirs").log(Level.INFO, "Echec{0}", e.getLocalizedMessage());
-                models.put("databaseErrorMessage", "La ligne existe déjà");
+        Produit p = new Produit();
+        for (Produit pr : facadeP.findAll()) {
+            if (pr.getNom() == nomP) {
+                p = pr;
             }
-
-            lignesCaddie.ajouterLigneCaddie(l);
-            models.put("lignesCaddie", lignesCaddie);
-
-        } else {
-            models.put("databaseErrorMessage", "Ce code n'existe pas");
         }
-    }
+        if (p != null) {
+            models.put("prd", p.getNom());
+            l.setProduit1(p);
+            l.setQuantite(qteP);
 
+            facadeL.create(l);
+
+            caddie.ajouterLigneCaddie(l);
+            models.put("lignesCaddie", caddie);
+            models.put("test", "ok");
+
+        }
+
+    }
 }

@@ -22,13 +22,13 @@ import javax.inject.Named;
 @Named("caddie")
 public class SessionCaddieController implements Serializable {
 
-    private Collection<Ligne> lignesCaddie;
+    ArrayList<Ligne> lignesCaddie = new ArrayList<>();
 
-    public Collection<Ligne> getlignesCaddie() {
+    public ArrayList<Ligne> getLignesCaddie() {
         return lignesCaddie;
     }
 
-    public void setlignesCaddie(Collection<Ligne> lignesCaddie) {
+    public void setLignesCaddie(ArrayList<Ligne> lignesCaddie) {
         this.lignesCaddie = lignesCaddie;
     }
 
@@ -40,16 +40,5 @@ public class SessionCaddieController implements Serializable {
         return (lignesCaddie.size());
     }
 
-    public Produit getProduit(int i) {
-        int k = 0;
-        Ligne li = null;
-        for (Ligne l : lignesCaddie) {
-            if (k == i) {
-                li = l;
-            }
-            k += 1;
-        }
-        return (li.getProduit1());
-    }
 
 }

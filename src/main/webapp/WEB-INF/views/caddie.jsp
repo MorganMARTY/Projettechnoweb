@@ -12,37 +12,39 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Caddie</title>
-         <link rel="stylesheet" href="../css/Caddie.css">
+        <link rel="stylesheet" href="../css/Caddie.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
 
-       <div id="entete" >
-<a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="../Image/houseIcon.png" alt="Bouton retour à l'accueil" /></a>
-</div>
-<br>
-<br>
+        <div id="entete" >
+            <a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="../Image/houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+        </div>
+        <br>
+        <br>
         <h2>Ajouter un produit au panier:</h2>
 
         <form type="POST">
-           <label>Nom:</label> <input name="nomP" placeholder="Nom Produit"><br><br>
-           <label>Quantité:</label> <input name="qteP" placeholder="Quantité"><br><br><br>
+            <label>Nom:</label> <input name="nomP" placeholder="Nom Produit"><br><br>
+            <label>Quantité:</label> <input name="qteP" placeholder="Quantité"><br><br><br>
             <input class="Caddie-btn" type="submit" value="Ajouter au panier">
         </form>
 
-      <br><br><br><br><h1>Votre Panier</h1><br><br>
+        <br><br><br><br><h1>Votre Panier</h1><br><br>
 
         <table border='1' id="customers">
             <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th> </th></tr>
                     <%-- Pour chaque produit, une ligne dans la table HTML --%>
-                    <c:forEach var="ligne" items="${lignesCaddie}">
-                <tr>
-                    <td>${ligne.produit1.reference}</td>
-                    <td>${mvc.encoders.html(ligne.produit1.nom)}</td>
-                    <td>${ligne.produit1.prixUnitaire}</td>
-                    <td>${mvc.encoders.html(ligne.produit1.categorie.libelle)}</td>
-                </tr>
-            </c:forEach>
+                    <c:if test="${test eq ok}">
+                        <c:forEach var="ligne" items="${lignesCaddie}">
+                    <tr>
+                        <td>${ligne.produit1.reference}</td>
+                        <td>${mvc.encoders.html(ligne.produit1.nom)}</td>
+                        <td>${ligne.produit1.prixUnitaire}</td>
+                        <td>${mvc.encoders.html(ligne.produit1.categorie.libelle)}</td>
+                    </tr>
+                </c:forEach>
+            </c:if>
         </table>
 
     </body>
