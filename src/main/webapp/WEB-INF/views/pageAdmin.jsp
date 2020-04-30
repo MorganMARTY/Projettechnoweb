@@ -14,6 +14,16 @@
         <title>Administrateur</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-    </body>
+        <h1>Bienvenue dans la partie Administrateur</h1>
+        <br><br><br><br>
+
+        <h2>Chiffres d'affaires</h2>
+
+        <br><br>
+
+    <li><a href="caCategorie">Chiffre d'affaires par catégorie</a></li>
+    <li><a href="caPays">Chiffre d'affaires par pays</a></li>
+    <li><a href="caClient">Chiffre d'affaire par client</a></li>  
+
+</body>
 </html>

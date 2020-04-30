@@ -53,7 +53,7 @@ public class IdentificationController {
                 if (p.getContact().equals(contact)) {
                     client.setCode(code);
                     return "redirect:pageClient";
-
+                    
                 } else {
                     models.put("databaseErrorMessage", "Ce contact ne correspond pas au client");
                 }
