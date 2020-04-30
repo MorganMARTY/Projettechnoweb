@@ -21,7 +21,7 @@
 
         <br><br>
 
-    <li><a href="caCategorie">Chiffre d'affaires par catégorie</a></li>
+    <li><a href="http://localhost:8080/Projettechnoweb/statsCategories.html">Chiffre d'affaires par catégorie</a></li>
     <li><a href="caPays">Chiffre d'affaires par pays</a></li>
     <li><a href="caClient">Chiffre d'affaire par client</a></li>  
 

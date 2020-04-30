@@ -47,10 +47,7 @@ public class pageAdminController {
     @GET
     @View("pageAdmin.jsp")
     public void bienvenue() {
-        Client u = facade.find(client.getCode());
-        models.put("utilisateur", u);
-        Collection<Produit> prods = facadeP.findAll();
-        models.put("produits", facadeP.findAll());
+
     }
 
 }

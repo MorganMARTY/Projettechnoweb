@@ -1,6 +1,7 @@
 package comptoirs.model.dao;
 
 import comptoirs.model.dto.StatsResult;
+import comptoirs.model.dto.StatsResultCat;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -32,6 +33,14 @@ public class StatisticsDao {
 		"JOIN p.ligneCollection li " + 
 		"WHERE cat.code = :code " +
 		"GROUP BY p.nom " ;
+        
+        private static final String PRICE_UNIT_SOLDS_DTO =
+		"SELECT new comptoirs.model.dto.StatsResultCat" +
+				        "(cat.libelle, SUM(li.quantite*p.prixUnitaire)) " + 
+		"FROM Categorie cat " + 
+		"JOIN cat.produitCollection p " + 
+		"JOIN p.ligneCollection li " + 
+		"GROUP BY cat.libelle";
 	
 	@PersistenceContext(unitName = "comptoirs")
 	private EntityManager em;
@@ -51,6 +60,12 @@ public class StatisticsDao {
 	public List<StatsResult> produitsVendusPour(Integer codeCategorie) {
 		Query query = em.createQuery(PRODUCTS_SOLDS_DTO, StatsResult.class);
 		List<StatsResult> results = query.setParameter("code", codeCategorie).getResultList();
+		return results;
+	}
+        
+        public List<StatsResultCat> prixUnitesVenduesParCategorieDTO() {
+		Query query = em.createQuery(PRICE_UNIT_SOLDS_DTO, StatsResultCat.class);
+		List<StatsResultCat> results = query.getResultList();
 		return results;
 	}
 }

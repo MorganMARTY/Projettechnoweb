@@ -57,7 +57,7 @@ public class CaddieController {
         Ligne l = new Ligne();
         Produit p = new Produit();
         for (Produit pr : facadeP.findAll()) {
-            if (pr.getNom() == nomP) {
+            if (pr.getNom().equals(nomP)) {
                 p = pr;
             }
         }

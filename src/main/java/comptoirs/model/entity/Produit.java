@@ -33,6 +33,7 @@ import javax.xml.bind.annotation.XmlTransient;
 	@NamedQuery(name = "Produit.findByUnitesCommandees", query = "SELECT p FROM Produit p WHERE p.unitesCommandees = :unitesCommandees"),
 	@NamedQuery(name = "Produit.findByNiveauDeReappro", query = "SELECT p FROM Produit p WHERE p.niveauDeReappro = :niveauDeReappro"),
 	@NamedQuery(name = "Produit.findByIndisponible", query = "SELECT p FROM Produit p WHERE p.indisponible = :indisponible")})
+
 public class Produit implements Serializable {
 
 	private static final long serialVersionUID = 1L;
