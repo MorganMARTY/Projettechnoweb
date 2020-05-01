@@ -41,6 +41,14 @@ public class StatisticsDao {
 		"JOIN cat.produitCollection p " + 
 		"JOIN p.ligneCollection li " + 
 		"GROUP BY cat.libelle";
+        
+        private static final String PRICE_UNIT_SOLDS_PAYS_DTO =
+		"SELECT new comptoirs.model.dto.StatsResultCat" +
+				        "(co.paysLivraison, SUM(li.quantite*p.prixUnitaire)) " + 
+		"FROM Commande co " + 
+                "JOIN co.produitCollection li " + 
+                "JOIN li.produitl p" +
+		"GROUP BY co.paysLivraison";
 	
 	@PersistenceContext(unitName = "comptoirs")
 	private EntityManager em;
@@ -65,6 +73,12 @@ public class StatisticsDao {
         
         public List<StatsResultCat> prixUnitesVenduesParCategorieDTO() {
 		Query query = em.createQuery(PRICE_UNIT_SOLDS_DTO, StatsResultCat.class);
+		List<StatsResultCat> results = query.getResultList();
+		return results;
+	}
+        
+        public List<StatsResultCat> prixUnitesVenduesParPaysDTO() {
+		Query query = em.createQuery(PRICE_UNIT_SOLDS_PAYS_DTO, StatsResultCat.class);
 		List<StatsResultCat> results = query.getResultList();
 		return results;
 	}

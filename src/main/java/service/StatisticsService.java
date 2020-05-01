@@ -16,31 +16,42 @@ import javax.ws.rs.core.MediaType;
 @Path("service/unitesVendues")
 public class StatisticsService {
 
-	@Inject
-	StatisticsDao dao;
-	
-	@GET @Path("categories")
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public List<StatsResult> unitesVenduesJSON() {
-		return dao.unitesVenduesParCategorieDTO();
-	}
-	
-	@GET @Path("produits")
-	@Produces(MediaType.APPLICATION_JSON)
-	public List<StatsResult> produitsVendus(@QueryParam("code") Integer codeCategorie) {
-		return dao.produitsVendusPour(codeCategorie);
-	}	
+    @Inject
+    StatisticsDao dao;
 
-	@GET @Path("vector")
-	@Produces(MediaType.APPLICATION_JSON)
-	public List unitesVenduesParCategorie() {
-		List result = dao.unitesVenduesParCategorie();
-		return result;
-	}
-        
-        @GET @Path("categories2")
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public List<StatsResultCat> prixUnitesVenduesJSON() {
-		return dao.prixUnitesVenduesParCategorieDTO();
-	}
+    @GET
+    @Path("categories")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public List<StatsResult> unitesVenduesJSON() {
+        return dao.unitesVenduesParCategorieDTO();
+    }
+
+    @GET
+    @Path("produits")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<StatsResult> produitsVendus(@QueryParam("code") Integer codeCategorie) {
+        return dao.produitsVendusPour(codeCategorie);
+    }
+
+    @GET
+    @Path("vector")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List unitesVenduesParCategorie() {
+        List result = dao.unitesVenduesParCategorie();
+        return result;
+    }
+
+    @GET
+    @Path("categories2")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public List<StatsResultCat> prixUnitesVenduesJSON() {
+        return dao.prixUnitesVenduesParCategorieDTO();
+    }
+
+    @GET
+    @Path("pays")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public List<StatsResultCat> prixUnitesVenduesParPaysJSON() {
+        return dao.prixUnitesVenduesParPaysDTO();
+    }
 }
