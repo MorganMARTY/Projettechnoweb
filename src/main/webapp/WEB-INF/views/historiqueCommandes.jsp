@@ -14,10 +14,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+         <link rel="stylesheet" href="HistComm.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+
+        <div id="entete" >
+<a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+</div>
+<br>
+<br>
         <h1>Commandes du client '${utilisateur.societe}'</h1>
-        <table border='1'>
+        <table border='1' id="customers">
             <tr><th>Numéro</th><th>Saisie le</th><th>nb. lignes</th></tr>
             <c:if test="${empty utilisateur.commandeCollection}">
                 <tr><td colspan="3">aucun produit dans cette catégorie</td></tr>	

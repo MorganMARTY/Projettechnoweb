@@ -7,12 +7,22 @@
 
 <head>
 	<title>Affiche tous les produits</title>
+	 <link rel="stylesheet" href="AffichProd.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-	<h1>Liste des produits</h1>
+
+<div id="entete" >
+<a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+</div>
+
+<br><br><br><br><br><br><br><br>
+  
+	<h1>Liste des produits</h1><br><br>
 	<a href="produits/create">Ajouter un nouveau produit</a>
-	<table border='1'>
+	<br><br>
+	<table border='1' id="customers">
 		<tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th></tr>
 		<%-- Pour chaque produit, une ligne dans la table HTML --%>
 		<c:forEach var="produit" items="${produits}">
@@ -26,7 +36,6 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<a href="${pageContext.request.contextPath}/">Retour au menu</a>
 </body>
 
 </html>

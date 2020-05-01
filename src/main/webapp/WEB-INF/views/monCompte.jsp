@@ -13,7 +13,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Mon Compte</title>
-        <link rel="stylesheet" href="../css/compte.css">
+        <link rel="stylesheet" href="compte.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>

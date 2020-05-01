@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1 mai 2020, 17:21:47
+    Author     : gaetan
+*/
+
+body{
+	margin: 0;
+    padding: 0;
+	background : url(modifProd.jpg)  no-repeat center fixed;
+	background-size: cover;
+}
+
+
+h1{
+	color: #111;
+	font-family: 'Trocchi', serif; 
+	font-size: 45px; 
+	font-weight: normal; 
+	line-height: 38px; margin: 0;
+	text-decoration: underline ;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+h2{
+	color: #111; 
+	font-family: 'Trocchi', serif; 
+	font-size: 25px; 
+	font-weight: normal; 
+	line-height: 38px; 
+	margin-left: 130px;
+	text-decoration: underline;
+}
+
+li{
+    list-style-type: square;
+    font-size: 20px;
+    color: #800080;
+    margin-left: 150px;
+}
+
+a{
+    text-decoration: none;
+    color: #800080;
+}
