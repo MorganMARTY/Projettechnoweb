@@ -22,7 +22,7 @@
       
        <br><br><br><br>
 
-        <h2>Liste des produits</h2>
+        <h2>Liste des produits</h2> 
 
         <br><br>
         
