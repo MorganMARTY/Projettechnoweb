@@ -54,4 +54,11 @@ public class StatisticsService {
     public List<StatsResultCat> prixUnitesVenduesParPaysJSON() {
         return dao.prixUnitesVenduesParPaysDTO();
     }
+    
+    @GET
+    @Path("clients")
+    @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+    public List<StatsResultCat> prixUnitesVenduesParClientJSON() {
+        return dao.prixUnitesVenduesParClientDTO();
+    }
 }
