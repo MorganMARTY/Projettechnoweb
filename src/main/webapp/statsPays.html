@@ -32,7 +32,7 @@ and open the template in the editor.
 			result.forEach(ligne => data.push([ligne.libelle, ligne.prix]));
 			var dataTable = google.visualization.arrayToDataTable(data);
 
-			var options = {title: 'Voici un beau camembert'};
+			var options = {title: 'Représentation du chiffre d affaires par pays'};
 			var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 			chart.draw(dataTable, options);
 		}
@@ -55,7 +55,7 @@ and open the template in the editor.
 	</script>
 </head>
 <body>
-	<h1>Chiffre d'affaire par pays</h1>
+	<h1>Chiffre d'affaires par pays</h1>
 	<!-- Le graphique apparaît ici -->
 	<div id="piechart" style="width: 900px; height: 500px;"></div>
 	<hr>
