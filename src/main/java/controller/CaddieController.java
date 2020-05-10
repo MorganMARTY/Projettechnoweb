@@ -5,11 +5,17 @@
  */
 package controller;
 
+import comptoirs.model.dao.ClientFacade;
+import comptoirs.model.dao.CommandeFacade;
 import comptoirs.model.dao.LigneFacade;
 import comptoirs.model.dao.ProduitFacade;
+import comptoirs.model.entity.Client;
+import comptoirs.model.entity.Commande;
 import comptoirs.model.entity.Ligne;
 import comptoirs.model.entity.Produit;
+import java.math.BigDecimal;
 import java.util.Collection;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.EJBException;
@@ -38,16 +44,26 @@ public class CaddieController {
 
     @Inject
     ProduitFacade facadeP;
+    
+    @Inject
+    ClientFacade facadeCl;
 
     @Inject
     LigneFacade facadeL;
 
     @Inject
     SessionCaddieController caddie;
+    
+    @Inject
+    SessionClientController client;
+    
+    @Inject
+    CommandeFacade facadeC;
 
     @GET
     public void show() {
         models.put("produits", facadeP.findAll());
+        models.put("clients", facadeCl.findAll());
         models.put("ok", "ok");
     }
 
@@ -65,6 +81,7 @@ public class CaddieController {
             models.put("prd", p.getNom());
             l.setProduit1(p);
             l.setQuantite(qteP);
+            l.setCommande1(null);
 
             facadeL.create(l);
 
@@ -74,5 +91,45 @@ public class CaddieController {
 
         }
 
+    }
+
+    @GET
+    @Path("nvCommande")
+    public void create() {
+        models.put("panier", caddie);
+    }
+
+    @POST
+    @Path("nvCommande")
+    public void nvllCommande() {
+        Commande nvCommande = new Commande();
+        Client c = new Client();
+        for (Client cl : facadeCl.findAll()) {
+            if (cl.getCode().equals(client.getCode())) {
+                c = cl;
+            }
+        }
+        nvCommande.setClient(c);
+        nvCommande.setSaisieLe(new Date());
+        nvCommande.setEnvoyeeLe(null);
+        nvCommande.setAdresseLivraison(c.getAdresse());
+        nvCommande.setCodePostalLivrais(c.getCodePostal());
+        nvCommande.setDestinataire(c.getSociete());
+        nvCommande.setRegionLivraison(c.getRegion());
+        nvCommande.setLigneCollection(caddie.getLignesCaddie());
+        nvCommande.setVilleLivraison(c.getVille());
+        nvCommande.setPaysLivraison(c.getPays());
+        nvCommande.setRemise(BigDecimal.ZERO);
+        nvCommande.setPort(BigDecimal.ZERO);
+        nvCommande.setNumero(12000);
+
+        facadeC.create(nvCommande);
+        
+        if(nvCommande.getNumero()!=null){
+            models.put("validation", "Panier validé!");
+        }
+        else{
+            models.put("validation", "Panier vide!");
+        }
     }
 }

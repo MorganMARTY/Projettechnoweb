@@ -46,6 +46,10 @@
                 </c:forEach>
             </c:if>
         </table>
+        <form type="POST">
+            <input type="submit" value="Valider le panier">
+            <a>${validation}</a>
+        </form>
 
     </body>
 </html>
