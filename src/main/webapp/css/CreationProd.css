@@ -11,7 +11,7 @@ and open the template in the editor.
 body{
 	margin: 0;
     padding: 0;
-	background : url(Image/Produit.png)  no-repeat center fixed;
+	background : url(Produit.png)  no-repeat center fixed;
 	background-size: cover;
 }
 
