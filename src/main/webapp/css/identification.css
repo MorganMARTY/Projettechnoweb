@@ -11,7 +11,7 @@ a{
 body{
     margin: 0;
     padding: 0;
-    background: url(/Image/walpFood.jpg) no-repeat center fixed;
+    background: url(Image/walpFood.jpg) no-repeat center fixed;
     background-size: cover;
     
 }
