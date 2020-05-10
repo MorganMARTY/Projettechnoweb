@@ -7,7 +7,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Page Client</title>
-        <link rel="stylesheet" type="text/css" href="/pageclient.css">
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/pageclient.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>

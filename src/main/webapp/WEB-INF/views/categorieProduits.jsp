@@ -7,7 +7,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Produits dans la catégorie '${selected.libelle}'</title>
-		<link rel="stylesheet" type="text/css" href="/ProduitCAT.css">
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/ProduitCAT.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 

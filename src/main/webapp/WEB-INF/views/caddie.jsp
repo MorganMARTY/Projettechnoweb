@@ -12,7 +12,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Caddie</title>
-        <link rel="stylesheet" type="text/css" href="/Caddie.css">
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Caddie.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>

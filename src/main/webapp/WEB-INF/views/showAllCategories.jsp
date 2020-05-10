@@ -4,7 +4,7 @@
 
 <head>
 	<title>Affiche toutes les catégories</title>
-	<link rel="stylesheet" type="text/css" href="/AffichCat.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/AffichCat.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>

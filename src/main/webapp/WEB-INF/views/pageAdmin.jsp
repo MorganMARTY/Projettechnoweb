@@ -12,7 +12,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Administrateur</title>
-         <link rel="stylesheet" type="text/css" href="/PageAdmin.css">
+         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/PageAdmin.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
