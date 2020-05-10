@@ -26,6 +26,7 @@
     <li><a href="http://localhost:8080/Projettechnoweb/statsCategories.html">Chiffre d'affaires par catégorie</a></li>
     <li><a href="http://localhost:8080/Projettechnoweb/statsPays.html">Chiffre d'affaires par pays</a></li>
     <li><a href="http://localhost:8080/Projettechnoweb/statsClients.html">Chiffre d'affaire par client</a></li>  
+    <li><a href="statsCategorie">Chiffre d'affaires par catégorie selon des dates données</a></li>
 
 </body>
 </html>

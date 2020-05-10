@@ -2,6 +2,7 @@ package comptoirs.model.dao;
 
 import comptoirs.model.dto.StatsResult;
 import comptoirs.model.dto.StatsResultCat;
+import java.util.Date;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -59,6 +60,15 @@ public class StatisticsDao {
             + "JOIN p.ligneCollection li "
             + "GROUP BY co.client";
 
+    private static final String PRICE_UNIT_SOLDS_DATE_DTO
+            = "SELECT new comptoirs.model.dto.StatsResultCat"
+            + "(cat.libelle, SUM(li.quantite*p.prixUnitaire)) "
+            + "FROM Categorie cat "
+            + "JOIN cat.produitCollection p "
+            + "JOIN p.ligneCollection li "
+            + "WHERE cat.saisieLe>:dateDebut AND cat.saisieLe<:dateFin"
+            + "GROUP BY cat.libelle";
+
     @PersistenceContext(unitName = "comptoirs")
     private EntityManager em;
 
@@ -95,6 +105,12 @@ public class StatisticsDao {
     public List<StatsResultCat> prixUnitesVenduesParClientDTO() {
         Query query = em.createQuery(PRICE_UNIT_SOLDS_CLIENTS_DTO, StatsResultCat.class);
         List<StatsResultCat> results = query.getResultList();
+        return results;
+    }
+
+    public List<StatsResultCat> prixUnitesVenduesParCategorieDTO(Date dateDebut, Date dateFin) {
+        Query query = em.createQuery(PRICE_UNIT_SOLDS_DATE_DTO, StatsResultCat.class);
+        List<StatsResultCat> results = query.setParameter("dateDebut", dateDebut).getResultList();
         return results;
     }
 }

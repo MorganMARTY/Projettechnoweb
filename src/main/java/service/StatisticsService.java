@@ -3,6 +3,7 @@ package service;
 import comptoirs.model.dao.StatisticsDao;
 import comptoirs.model.dto.StatsResult;
 import comptoirs.model.dto.StatsResultCat;
+import java.util.Date;
 import java.util.List;
 import javax.inject.Inject;
 
@@ -61,4 +62,11 @@ public class StatisticsService {
     public List<StatsResultCat> prixUnitesVenduesParClientJSON() {
         return dao.prixUnitesVenduesParClientDTO();
     }
+    
+//    @GET
+//    @Path("dates")
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public List<StatsResult> produitsVendus(@QueryParam("dateDebut") Date dateDebut) {
+//        return dao.produitsVendusPour(dateDebut);
+//    }
 }
