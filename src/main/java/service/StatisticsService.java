@@ -63,10 +63,10 @@ public class StatisticsService {
         return dao.prixUnitesVenduesParClientDTO();
     }
     
-//    @GET
-//    @Path("dates")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public List<StatsResult> produitsVendus(@QueryParam("dateDebut") Date dateDebut) {
-//        return dao.produitsVendusPour(dateDebut);
-//    }
+    @GET
+    @Path("dates")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<StatsResultCat> produitsVendus(@QueryParam("dateDebut") Date dateDebut, @QueryParam("dateFin") Date dateFin) {
+        return dao.prixUnitesVenduesParCategorieDatesDTO(dateDebut,dateFin);
+    }
 }

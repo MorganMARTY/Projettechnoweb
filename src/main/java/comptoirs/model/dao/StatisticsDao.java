@@ -108,9 +108,11 @@ public class StatisticsDao {
         return results;
     }
 
-    public List<StatsResultCat> prixUnitesVenduesParCategorieDTO(Date dateDebut, Date dateFin) {
+    public List<StatsResultCat> prixUnitesVenduesParCategorieDatesDTO(Date dateDebut, Date dateFin) {
         Query query = em.createQuery(PRICE_UNIT_SOLDS_DATE_DTO, StatsResultCat.class);
-        List<StatsResultCat> results = query.setParameter("dateDebut", dateDebut).getResultList();
+        query = query.setParameter("dateDebut", dateDebut);
+        query = query.setParameter("dateFin", dateFin);
+        List<StatsResultCat> results = query.getResultList();
         return results;
     }
 }

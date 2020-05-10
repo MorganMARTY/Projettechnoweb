@@ -35,7 +35,7 @@
 		// Afficher les unités vendues pour la catégorie choisie
 		function doAjax() {
 			$.ajax({
-				url: "mvc/service/unitesVendues/categories2",
+				url: "mvc/service/unitesVendues/dates",
 				// Les données saisies dans le formlaire
 				data : $('#formulaireStatsCategorie').serialize(),
 				dataType: "json",
@@ -53,9 +53,7 @@
 </head>
 <body>
 	<h1>Produits vendus pour une catégorie</h1>
-	<p>Illustre le passage de paramètres dans un appel AJAX</p>
-	<%-- Un formulaire pour choisir la catégorie à afficher --%>
-	<%-- On pourrait également faire un appel AJAX pour aller chercher la liste des catégories --%>
+	<%-- Un formulaire pour choisir les dates --%>
 	<form id="formulaireStatsCategorie">
             <input type="date" name="dateDebut"></br>
             <input type="date" name="dateFin">
