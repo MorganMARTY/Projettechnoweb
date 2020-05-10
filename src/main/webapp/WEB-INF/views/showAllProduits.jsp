@@ -7,7 +7,7 @@
 
 <head>
 	<title>Affiche tous les produits</title>
-	 <link rel="stylesheet" href="AffichProd.css">
+	 <link rel="stylesheet" type="text/css" href="/AffichProd.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 

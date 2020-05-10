@@ -17,7 +17,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Modifier vos données</title>
-        <link rel="stylesheet" href="ModifDonnée.css">
+        <link rel="stylesheet" type="text/css" href="/ModifDonnée.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>

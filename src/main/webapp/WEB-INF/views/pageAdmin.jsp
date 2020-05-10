@@ -12,14 +12,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Administrateur</title>
+         <link rel="stylesheet" type="text/css" href="/PageAdmin.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <h1>Bienvenue dans la partie Administrateur</h1>
-        <br><br><br><br>
-
-        <h2>Chiffres d'affaires</h2>
-
         <br><br>
+
+        <h2>Chiffres d'affaires : </h2>
+
+        <br>
 
     <li><a href="http://localhost:8080/Projettechnoweb/statsCategories.html">Chiffre d'affaires par catégorie</a></li>
     <li><a href="http://localhost:8080/Projettechnoweb/statsPays.html">Chiffre d'affaires par pays</a></li>
