@@ -25,8 +25,13 @@
         <h2>Ajouter un produit au panier:</h2>
 
         <form type="POST">
-            <label>Nom:</label> <input name="nomP" placeholder="Nom Produit"><br><br>
-            <label>Quantité:</label> <input name="qteP" placeholder="Quantité"><br><br><br>
+            <label>Produit :</label><select name='codeProduit'>
+                <%-- On parcourt la liste des catégories en mettant une option pour chaque catégorie --%>
+                <c:forEach var="produit" items="${produits}">
+                    <option value='${produit.reference}'>${produit.nom}</option>
+                </c:forEach>
+            </select><br><br>
+            <label>Quantité :</label> <input name="qteP" type="number" min="0.00" max="10000.00" step="1.00" /><br><br>
             <input class="Caddie-btn" type="submit" value="Ajouter au panier">
         </form>
 
@@ -35,7 +40,7 @@
         <table border='1' id="customers">
             <tr><th>Référence</th><th>Nom</th><th>Prix Unitaire</th><th>Catégorie</th><th> </th></tr>
                     <%-- Pour chaque produit, une ligne dans la table HTML --%>
-                    <c:if test="${test eq ok}">
+                    <c:if test="${!empty lignesCaddie}">
                         <c:forEach var="ligne" items="${lignesCaddie}">
                     <tr>
                         <td>${ligne.produit1.reference}</td>
@@ -46,10 +51,10 @@
                 </c:forEach>
             </c:if>
         </table>
-        <form type="POST">
-            <input type="submit" value="Valider le panier">
-            <a>${validation}</a>
-        </form>
+        <!--        <form type="POST">
+                    <input type="submit" value="Valider le panier">
+                    <a></a>
+                </form>-->
 
     </body>
 </html>

@@ -5,6 +5,7 @@
  */
 package controller;
 
+import comptoirs.model.entity.Commande;
 import comptoirs.model.entity.Ligne;
 import comptoirs.model.entity.Produit;
 import java.io.Serializable;
@@ -22,8 +23,8 @@ import javax.inject.Named;
 @Named("caddie")
 public class SessionCaddieController implements Serializable {
 
-    Collection<Ligne> lignesCaddie;
-
+    private Collection<Ligne> lignesCaddie;
+    
     public Collection<Ligne> getLignesCaddie() {
         return lignesCaddie;
     }

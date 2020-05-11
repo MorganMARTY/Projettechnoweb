@@ -34,7 +34,9 @@
             Nom : <input name="contact" class="ident-form-text" placeholder="Votre Nom"></br>
             Code : <input name="code" type="password" class="ident-form-text" placeholder="Mot de Passe"></br>
             <input type="submit" value="Valider" class="ident-form-btn">
+            <a>${databaseErrorMessage}</a>
         </fieldset>
+            
     </form>
           </div>
     

@@ -44,7 +44,7 @@ public class CaddieController {
 
     @Inject
     ProduitFacade facadeP;
-    
+
     @Inject
     ClientFacade facadeCl;
 
@@ -53,10 +53,10 @@ public class CaddieController {
 
     @Inject
     SessionCaddieController caddie;
-    
+
     @Inject
     SessionClientController client;
-    
+
     @Inject
     CommandeFacade facadeC;
 
@@ -64,72 +64,61 @@ public class CaddieController {
     public void show() {
         models.put("produits", facadeP.findAll());
         models.put("clients", facadeCl.findAll());
-        models.put("ok", "ok");
     }
 
     @POST
     @ValidateOnExecution(type = ExecutableType.ALL)
-    public void nvLigne(@FormParam("nomP") String nomP, @FormParam("qteP") Short qteP) {
+    public String nvLigne(@FormParam("codeProduit") Integer codeP, @FormParam("qteP") BigDecimal qteP) {
         Ligne l = new Ligne();
-        Produit p = new Produit();
-        for (Produit pr : facadeP.findAll()) {
-            if (pr.getNom().equals(nomP)) {
-                p = pr;
-            }
-        }
-        if (p != null) {
-            models.put("prd", p.getNom());
-            l.setProduit1(p);
-            l.setQuantite(qteP);
-            l.setCommande1(null);
-
-            facadeL.create(l);
-
-            caddie.ajouterLigneCaddie(l);
-            models.put("lignesCaddie", caddie);
-            models.put("test", "ok");
-
-        }
+        Produit p = facadeP.find(codeP);
+        l.setProduit1(p);
+        l.setQuantite(qteP.shortValueExact());
+        l.setCommande1(new Commande());
+        facadeL.create(l);
+        caddie.ajouterLigneCaddie(l);
+        models.put("lignesCaddie", caddie);
+        models.put("test", "ok");
+        return "redirect:/produits";
 
     }
-
-    @GET
-    @Path("nvCommande")
-    public void create() {
-        models.put("panier", caddie);
-    }
-
-    @POST
-    @Path("nvCommande")
-    public void nvllCommande() {
-        Commande nvCommande = new Commande();
-        Client c = new Client();
-        for (Client cl : facadeCl.findAll()) {
-            if (cl.getCode().equals(client.getCode())) {
-                c = cl;
-            }
-        }
-        nvCommande.setClient(c);
-        nvCommande.setSaisieLe(new Date());
-        nvCommande.setEnvoyeeLe(null);
-        nvCommande.setAdresseLivraison(c.getAdresse());
-        nvCommande.setCodePostalLivrais(c.getCodePostal());
-        nvCommande.setDestinataire(c.getSociete());
-        nvCommande.setRegionLivraison(c.getRegion());
-        nvCommande.setLigneCollection(caddie.getLignesCaddie());
-        nvCommande.setVilleLivraison(c.getVille());
-        nvCommande.setPaysLivraison(c.getPays());
-        nvCommande.setRemise(BigDecimal.ZERO);
-        nvCommande.setPort(BigDecimal.ZERO);
-        nvCommande.setNumero(12000);
-
-        facadeC.create(nvCommande);
-        
-        if(nvCommande.getNumero()!=null){
-            models.put("validation", "Panier validé!");
-        }
-        else{
-            models.put("validation", "Panier vide!");
-        }
-    }
+//créer une commande:
+//    @GET
+//    @Path("nvCommande")
+//    public void create() {
+//        models.put("panier", caddie);
+//    }
+//
+//    @POST
+//    @Path("nvCommande")
+//    public void nvllCommande() {
+//        Commande nvCommande = new Commande();
+//        Client c = new Client();
+//        for (Client cl : facadeCl.findAll()) {
+//            if (cl.getCode().equals(client.getCode())) {
+//                c = cl;
+//            }
+//        }
+//        nvCommande.setClient(c);
+//        nvCommande.setSaisieLe(new Date());
+//        nvCommande.setEnvoyeeLe(null);
+//        nvCommande.setAdresseLivraison(c.getAdresse());
+//        nvCommande.setCodePostalLivrais(c.getCodePostal());
+//        nvCommande.setDestinataire(c.getSociete());
+//        nvCommande.setRegionLivraison(c.getRegion());
+//        nvCommande.setLigneCollection(caddie.getLignesCaddie());
+//        nvCommande.setVilleLivraison(c.getVille());
+//        nvCommande.setPaysLivraison(c.getPays());
+//        nvCommande.setRemise(BigDecimal.ZERO);
+//        nvCommande.setPort(BigDecimal.ZERO);
+//        nvCommande.setNumero(12000);
+//
+//        facadeC.create(nvCommande);
+//        
+//        if(nvCommande.getNumero()!=null){
+//            models.put("validation", "Panier validé!");
+//        }
+//        else{
+//            models.put("validation", "Panier vide!");
+//        }
+//    }
 }
