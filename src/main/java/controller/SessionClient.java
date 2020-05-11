@@ -18,7 +18,7 @@ import javax.inject.Named;
 @SessionScoped
 @Named("client")
 
-public class SessionClientController implements Serializable
+public class SessionClient implements Serializable
 {
     private String codeClient;
         

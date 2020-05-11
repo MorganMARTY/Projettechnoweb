@@ -12,7 +12,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Administrateur</title>
-         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/PageAdmin.css">
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/PageAdmin.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -27,6 +27,7 @@
     <li><a href="http://localhost:8080/Projettechnoweb/statsPays.html">Chiffre d'affaires par pays</a></li>
     <li><a href="http://localhost:8080/Projettechnoweb/statsClients.html">Chiffre d'affaire par client</a></li>  
     <li><a href="statsCategorie">Chiffre d'affaires par catégorie selon des dates données</a></li>
+    <br><br><br><br><a href="identification">Déconnexion</a>
 
 </body>
 </html>

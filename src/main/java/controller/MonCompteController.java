@@ -18,12 +18,12 @@ import javax.ws.rs.Path;
  *
  * @author marie
  */
-
 @Controller
 @Path("monCompte") // Le chemin d'accès au contrôleur
 @View("monCompte.jsp") // La vue qui affiche le résultat
 
 public class MonCompteController {
+
     @Inject // Le DAO (auto-généré) qui gère les entités "Client"
     ClientFacade facadeCl;
 
@@ -31,18 +31,13 @@ public class MonCompteController {
     Models models; // Pour transmettre les infos à la vue
 
     @Inject
-    SessionClientController client;
-    
-
+    SessionClient client;
 
     @GET
     public void afficheLeClient() {
         // On utilise le DAO pour trouver le client 
         // qui correspond au paramètre
         Client c = facadeCl.find(client.getCode());
-
-        
-        // TODO : gérer les erreurs : et si le client n'existe pas ?
         // On transmet les informations à la vue
         models.put("utilisateur", c);
 

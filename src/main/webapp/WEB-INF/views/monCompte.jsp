@@ -17,16 +17,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <body>
+    <body>
 
-<div id="entete" >
-    <a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="../Image/houseIcon.png" alt="Bouton retour à l'accueil" /></a>
-</div>
+        <div id="entete" >
+            <a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="../Image/houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+        </div>
 
-<br><br><br><br>
+        <br><br><br><br>
 
-    <h1> Mon compte </h1>
-<br><br>
+        <h1> Mon compte </h1>
+        <br><br>
         <ul class="un">
             <li>Ma société: ${utilisateur.societe}</li></br>
             <li>Ma fonction: ${utilisateur.fonction}</li></br>
@@ -41,10 +41,10 @@
                     <li>Région: ${utilisateur.region}</li>
                 </ul>
                 <ul class="deux">
-                   <li>Code Postal: ${utilisateur.codePostal}</li>
+                    <li>Code Postal: ${utilisateur.codePostal}</li>
                 </ul>
                 <ul class="deux">
-                   <li>Pays: ${utilisateur.pays}</li>
+                    <li>Pays: ${utilisateur.pays}</li>
                 </ul>
             </li></br>
             <li>Mon téléphone: ${utilisateur.telephone}</li></br>

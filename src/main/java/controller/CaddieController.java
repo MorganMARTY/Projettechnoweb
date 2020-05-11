@@ -52,10 +52,10 @@ public class CaddieController {
     LigneFacade facadeL;
 
     @Inject
-    SessionCaddieController caddie;
+    SessionCaddie caddie;
 
     @Inject
-    SessionClientController client;
+    SessionClient client;
 
     @Inject
     CommandeFacade facadeC;

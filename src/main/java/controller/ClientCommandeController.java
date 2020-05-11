@@ -36,9 +36,7 @@ public class ClientCommandeController {
     Models models; // Pour transmettre les infos à la vue
 
     @Inject
-    SessionClientController client;
-    
-
+    SessionClient client;
 
     @GET
     public void afficheCommandesPourLeClient() {
@@ -46,7 +44,6 @@ public class ClientCommandeController {
         // qui correspond au paramètre
         Client c = facadeCl.find(client.getCode());
 
-        
         // TODO : gérer les erreurs : et si le client n'existe pas ?
         // On transmet les informations à la vue
         models.put("utilisateur", c);

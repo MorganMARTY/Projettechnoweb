@@ -16,30 +16,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        
-   
 
-<div id="entete" >
-    <a href="${pageContext.request.contextPath}/">Retour au menu</a>
-</div>>
-<br><br>
-<div class="contact-section" >
-        
-        
+
+
+        <div id="entete" >
+            <a href="${pageContext.request.contextPath}/">Retour au menu</a>
+        </div>>
+        <br><br>
+        <div class="contact-section" >
+
+
             <br><br>
-         <fieldset>
-            <h1>Log In</h1>
-            <form method="POST" class="ident-form">
+            <fieldset>
+                <h1>Log In</h1>
+                <form method="POST" class="ident-form">
 
-            Nom : <input name="contact" class="ident-form-text" placeholder="Votre Nom"></br>
-            Code : <input name="code" type="password" class="ident-form-text" placeholder="Mot de Passe"></br>
-            <input type="submit" value="Valider" class="ident-form-btn">
-            <a>${databaseErrorMessage}</a>
-        </fieldset>
-            
-    </form>
-          </div>
-    
+                    Nom : <input name="contact" class="ident-form-text" placeholder="Votre Nom"></br>
+                    Code : <input name="code" type="password" class="ident-form-text" placeholder="Mot de Passe"></br>
+                    <input type="submit" value="Valider" class="ident-form-btn">
+                    <a>${databaseErrorMessage}</a>
+            </fieldset>
+
+        </form>
+    </div>
+
 </body>
 </html>
 

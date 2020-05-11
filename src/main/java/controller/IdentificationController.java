@@ -28,14 +28,14 @@ import javax.ws.rs.Path;
 @View("identification.jsp")
 public class IdentificationController {
 
-    @Inject // Le DAO généré par netBeans
+    @Inject
     ClientFacade dao;
 
     @Inject
     Models models;
 
     @Inject
-    SessionClientController client;
+    SessionClient client;
 
     @GET
     public void show() {
@@ -53,7 +53,7 @@ public class IdentificationController {
                 if (p.getContact().equals(contact)) {
                     client.setCode(code);
                     return "redirect:pageClient";
-                    
+
                 } else {
                     models.put("databaseErrorMessage", "Ce contact ne correspond pas au client");
                 }

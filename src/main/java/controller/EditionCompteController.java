@@ -20,7 +20,6 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
-
 /**
  *
  * @author marie
@@ -30,14 +29,14 @@ import javax.ws.rs.Path;
 @View("editionCompte.jsp")
 public class EditionCompteController {
 
-    @Inject // Le DAO généré par netBeans
+    @Inject
     ClientFacade facadeCl;
 
     @Inject
     Models models;
 
     @Inject
-    SessionClientController client;
+    SessionClient client;
 
     @GET
     public void afficheLeClient() {
@@ -49,34 +48,34 @@ public class EditionCompteController {
     @POST
     public String edition(@FormParam("nvNom") String nvNom, @FormParam("nvSociete") String nvSociete, @FormParam("nvFonction") String nvFonction, @FormParam("nvAdresse") String nvAdresse, @FormParam("nvVille") String nvVille, @FormParam("nvRegion") String nvRegion, @FormParam("nvCodeP") String nvCodeP, @FormParam("nvPays") String nvPays, @FormParam("nvTel") String nvTel, @FormParam("nvFax") String nvFax) {
         Client c = facadeCl.find(client.getCode());
-        if (nvNom.isEmpty()==false) {
+        if (nvNom.isEmpty() == false) {
             c.setContact(nvNom);
         }
-        if (nvSociete.isEmpty()==false) {
+        if (nvSociete.isEmpty() == false) {
             c.setSociete(nvSociete);
         }
-        if (nvFonction.isEmpty()==false) {
+        if (nvFonction.isEmpty() == false) {
             c.setFonction(nvFonction);
         }
-        if (nvAdresse.isEmpty()==false) {
+        if (nvAdresse.isEmpty() == false) {
             c.setAdresse(nvAdresse);
         }
-        if (nvVille.isEmpty()==false) {
+        if (nvVille.isEmpty() == false) {
             c.setVille(nvVille);
         }
-        if (nvRegion.isEmpty()==false) {
+        if (nvRegion.isEmpty() == false) {
             c.setRegion(nvRegion);
         }
-        if (nvCodeP.isEmpty()==false) {
+        if (nvCodeP.isEmpty() == false) {
             c.setCodePostal(nvCodeP);
         }
-        if (nvPays.isEmpty()==false) {
+        if (nvPays.isEmpty() == false) {
             c.setPays(nvPays);
         }
-        if (nvTel.isEmpty()==false) {
+        if (nvTel.isEmpty() == false) {
             c.setTelephone(nvTel);
         }
-        if (nvFax.isEmpty()==false) {
+        if (nvFax.isEmpty() == false) {
             c.setFax(nvFax);
         }
         facadeCl.edit(c);

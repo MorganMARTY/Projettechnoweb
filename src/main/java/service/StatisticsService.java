@@ -55,18 +55,18 @@ public class StatisticsService {
     public List<StatsResultCat> prixUnitesVenduesParPaysJSON() {
         return dao.prixUnitesVenduesParPaysDTO();
     }
-    
+
     @GET
     @Path("clients")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public List<StatsResultCat> prixUnitesVenduesParClientJSON() {
         return dao.prixUnitesVenduesParClientDTO();
     }
-    
+
     @GET
     @Path("dates")
     @Produces(MediaType.APPLICATION_JSON)
     public List<StatsResultCat> produitsVendus(@QueryParam("dateDebut") Date dateDebut, @QueryParam("dateFin") Date dateFin) {
-        return dao.prixUnitesVenduesParCategorieDatesDTO(dateDebut,dateFin);
+        return dao.prixUnitesVenduesParCategorieDatesDTO(dateDebut, dateFin);
     }
 }

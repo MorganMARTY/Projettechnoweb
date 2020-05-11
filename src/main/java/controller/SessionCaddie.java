@@ -21,10 +21,10 @@ import javax.inject.Named;
  */
 @SessionScoped
 @Named("caddie")
-public class SessionCaddieController implements Serializable {
+public class SessionCaddie implements Serializable {
 
     private Collection<Ligne> lignesCaddie;
-    
+
     public Collection<Ligne> getLignesCaddie() {
         return lignesCaddie;
     }
@@ -40,6 +40,5 @@ public class SessionCaddieController implements Serializable {
     public int taille() {
         return (lignesCaddie.size());
     }
-
 
 }

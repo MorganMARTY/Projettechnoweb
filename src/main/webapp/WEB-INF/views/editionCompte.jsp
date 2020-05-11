@@ -22,13 +22,13 @@
     </head>
     <body>
 
-<div id="entete" >
-<a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="houseIcon.png" alt="Bouton retour à l'accueil" /></a>
-</div>
-<br>
-<br>
-        
-    <h3>Modifier vos données :</h3>
+        <div id="entete" >
+            <a href="${pageContext.request.contextPath}/"><img id="imghome" class="left" src="houseIcon.png" alt="Bouton retour à l'accueil" /></a>
+        </div>
+        <br>
+        <br>
+
+        <h3>Modifier vos données :</h3>
 
         <ul>
             <form method="POST">
@@ -59,7 +59,7 @@
 
                 <li>Mon fax: ${utilisateur.fax} </br></br><ul> <label>Nouveau fax:</label> <input name="nvFax"></li></ul></br></br>
 
-                <input type="submit" value="Valider" class="Vald-btn">
+                    <input type="submit" value="Valider" class="Vald-btn">
             </form>
         </ul>
 

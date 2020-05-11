@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement; 
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -19,20 +19,20 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class StatsResultCat {
 
-	public StatsResultCat(String libelle, BigDecimal prix) {
-		this.prix = prix;
-		this.libelle = libelle;
-	}
-	
-	public StatsResultCat() {
-		this("Inconnu", BigDecimal.valueOf(0l));
-	}
-	
-	// Pas utile de mettre des "getter" ici (final)
-	@XmlElement
-	public final BigDecimal prix;
+    public StatsResultCat(String libelle, BigDecimal prix) {
+        this.prix = prix;
+        this.libelle = libelle;
+    }
 
-	@XmlElement
-	public final String libelle;
-	
+    public StatsResultCat() {
+        this("Inconnu", BigDecimal.valueOf(0l));
+    }
+
+    // Pas utile de mettre des "getter" ici (final)
+    @XmlElement
+    public final BigDecimal prix;
+
+    @XmlElement
+    public final String libelle;
+
 }
